@@ -1,0 +1,48 @@
+{{define "subject"}}Dormus - You have requested to login - Access your code now!{{end}}
+
+{{define "plainBody"}}
+
+Hi,
+
+You requested a secure login link for your account.
+
+Click the link below to sign in instantly — no password required:
+
+{{.LoginLink}}
+
+This link is valid for only 5 minutes and can only be used once.
+If you didn’t request this email, you can safely ignore it and don't share the link with anyone.
+
+Best regards,
+Dormus Team
+
+{{end}}
+
+{{define "htmlBody"}}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+
+<p>Hi,</p>
+
+<p>You requested a secure login link for your account.</p>
+
+<p>Click the link below to sign in instantly — no password required:</p>
+
+<a href="{{.LoginLink}}">CLICK HERE</a>
+
+<p>This link is valid for only 5 minutes and can only be used once.</p>
+<p>If you didn’t request this email, you can safely ignore it and don't share the link with anyone.</p>
+
+<p>Best regards,</p>
+<p>Dormus Team</p>
+
+</body>
+</html>
+{{end}}

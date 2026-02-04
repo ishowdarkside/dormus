@@ -1,0 +1,48 @@
+{{define "subject"}}Dormus – Zatražili ste prijavu – Pristupite svom kodu sada!{{end}}
+
+{{define "plainBody"}}
+
+Zdravo,
+
+Zatražili ste prijavu za svoj nalog.
+
+Kliknite na link ispod kako biste se odmah prijavili — lozinka nije potrebna:
+
+{{.LoginLink}}
+
+Ovaj link važi 5 minuta i može se iskoristiti samo jednom.
+Ako vi niste zatražili ovaj email, slobodno ga ignorišite i nemojte ga dijeliti sa drugima.
+
+Srdačan pozdrav,
+Dormus tim
+
+{{end}}
+
+{{define "htmlBody"}}
+<!doctype html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+
+<p>Zdravo,</p>
+
+<p>Zatražili ste prijavu za svoj nalog.</p>
+
+<p>Kliknite na link ispod kako biste se odmah prijavili — lozinka nije potrebna:</p>
+
+<a href="{{.LoginLink}}">KLIKNI OVDJE</a>
+
+<p>Ovaj link važi 5 minuta i može se iskoristiti samo jednom.</p>
+<p>Ako niste vi zatražili ovaj email, slobodno ga ignorišite i nemojte ga dijeliti s drugima.</p>
+
+<p>Srdačan pozdrav,</p>
+<p>Dormus tim</p>
+
+</body>
+</html>
+{{end}}
